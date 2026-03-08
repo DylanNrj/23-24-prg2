@@ -1,8 +1,4 @@
 
-/**
- * Representa un ticket de cine asociado a una película y visitante.
- * Mantiene el estado del ticket (Emitido/Resuelto).
- */
 class Ticket {
 
     private String estado;

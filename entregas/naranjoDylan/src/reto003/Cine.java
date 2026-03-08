@@ -1,8 +1,4 @@
 
-/**
- * Representa un cine con ubicación, salas y cartelera de películas.
- * Gestiona la venta de tickets para las películas en cartelera.
- */
 class Cine {
 
     private static final String SEPARADOR_PELICULAS = "------------------------";

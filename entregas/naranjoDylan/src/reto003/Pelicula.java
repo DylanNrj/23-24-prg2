@@ -1,10 +1,6 @@
 
 import java.util.Random;
 
-/**
- * Representa una película con nombre y género.
- * Permite selección aleatoria de películas desde un conjunto.
- */
 class Pelicula {
 
     private static final Random RANDOM = new Random();
@@ -26,14 +22,6 @@ class Pelicula {
         System.out.println(String.format("Genero: %s", genero));
     }
 
-    /**
-     * Selecciona una película aleatoria del conjunto proporcionado.
-     * Util para simulaciones de selección automática de películas.
-     * 
-     * @param peliculas Array de películas disponibles
-     * @return Película seleccionada aleatoriamente
-     * @throws IllegalArgumentException si no hay películas disponibles
-     */
     public static Pelicula seleccionarPeliculaAleatoria(Pelicula... peliculas) {
         if (peliculas == null || peliculas.length == 0) {
             throw new IllegalArgumentException("Debe haber al menos una pelicula en cartelera.");
