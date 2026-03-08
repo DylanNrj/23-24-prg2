@@ -1,5 +1,9 @@
 
-public class reto003 {
+/**
+ * Programa principal que simula el funcionamiento de un cine.
+ * Demuestra la interacción entre Cine, Peliculas, Visitantes y Tickets.
+ */
+public class Reto003 {
 
     public static void main(String[] args) {
         Cine cine = new Cine("Cinesa", "El Corte Ingles", 5);

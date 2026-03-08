@@ -1,6 +1,12 @@
 
+/**
+ * Representa un cine con ubicación, salas y cartelera de películas.
+ * Gestiona la venta de tickets para las películas en cartelera.
+ */
 class Cine {
 
+    private static final String SEPARADOR_PELICULAS = "------------------------";
+    
     private final String nombre;
     private final String ubicacion;
     private final int salas;
@@ -18,16 +24,21 @@ class Cine {
     }
 
     public void mostrarCartelera() {
-        System.out.println("Cine: " + nombre + " | Ubicacion: " + ubicacion + " | Salas: " + salas);
+        System.out.println(
+            String.format("Cine: %s | Ubicacion: %s | Salas: %d", nombre, ubicacion, salas)
+        );
         System.out.println("Cartelera:");
         for (Pelicula pelicula : cartelera) {
             pelicula.mostrarFicha();
-            System.out.println("------------------------");
+            System.out.println(SEPARADOR_PELICULAS);
         }
     }
 
     public Ticket venderTicket(Pelicula pelicula, Visitante visitante) {
-        System.out.println("Vendiendo ticket para " + pelicula.getNombre() + " a " + visitante.getNombre());
+        System.out.println(
+            String.format("[ACCION] Vendiendo ticket para '%s' a %s", 
+                pelicula.getNombre(), visitante.getNombre())
+        );
         return new Ticket(pelicula, visitante);
     }
 }

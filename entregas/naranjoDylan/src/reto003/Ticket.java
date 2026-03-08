@@ -1,4 +1,8 @@
 
+/**
+ * Representa un ticket de cine asociado a una película y visitante.
+ * Mantiene el estado del ticket (Emitido/Resuelto).
+ */
 class Ticket {
 
     private String estado;
@@ -12,7 +16,10 @@ class Ticket {
     }
 
     public void mostrarEstado() {
-        System.out.println("Estado del ticket de " + visitante.getNombre() + " para " + pelicula.getNombre() + ": " + estado);
+        System.out.println(
+            String.format("[INFO] Estado del ticket de %s para '%s': %s", 
+                visitante.getNombre(), pelicula.getNombre(), estado)
+        );
     }
 
     public void marcarComoResuelto() {

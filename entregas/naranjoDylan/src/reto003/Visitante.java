@@ -1,4 +1,7 @@
 
+/**
+ * Representa un visitante del cine identificado por nombre.
+ */
 class Visitante {
 
     private final String nombre;
